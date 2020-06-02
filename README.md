@@ -6,3 +6,6 @@
 ## Line Chart 
 - [Component Method](src/LineChart/Component.jsx)
 - [Hook Method](src/LineChart/Hook.jsx)
+
+### After Rendering 
+<img src='./image/LineChart.png'>
