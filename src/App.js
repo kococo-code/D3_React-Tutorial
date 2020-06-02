@@ -1,26 +1,10 @@
 import React from 'react';
 import './App.css';
-import LinearChart from './LineChart/Component'
+import './css/LineChart.css';
+import LinearChart from './LineChart/Component';
+import ReChart from './LineChart/reChart';
 import HookChart from './LineChart/Hook';
 function App() {
-  let CompoenentStyle ={
-    position : 'absolute',
-    left : 50,
-    top : 100,
-    width : 800,
-    height : 300,
-    backgroundColor : "#ffffff",
-    border : "1px solid #000000"
-  }
-  let HookStyle ={
-    position : 'absolute',
-    left : 50,
-    top: 500,
-    width : 800,
-    height : 300,
-    backgroundColor : "#222222",
-    border : "1px solid #000000"
-  }
   let wording ={
     position : 'absolute',
     left : 405,
@@ -42,7 +26,7 @@ function App() {
     },
     {
       x: 3,
-      y: 0.12
+      y: 1.2
     }
   ]
   let epoch = [1,2,3,4]
@@ -50,12 +34,13 @@ function App() {
   return (
     <div className="App">
       <span style={wording}>Line Graph</span>
-    <div style={CompoenentStyle}>
+    <div className="LineChartComponent" >
       <LinearChart data={data} loss={loss} epoch={epoch}></LinearChart>
     </div>
-    <div style={HookStyle}>
-      <HookChart data={data}></HookChart>
-    </div>
+    <div className="LineChart_reChart">
+  
+      <ReChart data={data}></ReChart>
+      </div>
     </div>
   );
 }

@@ -10,7 +10,7 @@ export default class LinearChart extends Component{
         let margin = {top: 10, right: 30, bottom: 30, left: 60}
         let width = 800 - margin.left - margin.right
         let height = 300 - margin.top - margin.bottom
-
+        let color = "#ff00ba"
         
         let svg = d3.select('svg')
         .attr('width',width + margin.left + margin.right)
@@ -33,7 +33,7 @@ export default class LinearChart extends Component{
 
         svg.append("path")
         .datum(data)
-        .attr("stroke","steelblue")
+        .attr("stroke",color)
         .attr('fill','none')
         .attr('d',d3.line()
         .x(function(d) {return x(d.x)})
