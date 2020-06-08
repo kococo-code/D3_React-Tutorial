@@ -1,12 +1,10 @@
 import React , {Component} from 'react';
 import * as d3 from 'd3';
-import { schemeGnBu } from 'd3';
 
-export default class LinearChart extends Component{
+export default class LineCharts extends Component{
     drawChart(){
         let data = this.props.data
-        let epoch = this.props.epoch 
-        let loss = this.props.loss
+      
         let margin = {top: 10, right: 30, bottom: 30, left: 60}
         let width = 800 - margin.left - margin.right
         let height = 300 - margin.top - margin.bottom
